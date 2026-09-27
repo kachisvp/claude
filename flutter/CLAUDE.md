@@ -43,7 +43,6 @@
 - 主要なウィジェットには `testWidgets` によるウィジェットテストを追加すること
 - 外部API・DB等の依存はモック（`mocktail`, `mockito`等）に置き換え、テストの再現性を担保すること
 - 主要なユーザーシナリオ（ログイン、購入等のクリティカルパス）には `integration_test` によるE2Eテストを整備すること
-- CI（GitHub Actions等）で `flutter analyze` と `flutter test` を自動実行し、失敗時はマージをブロックすること
 - カバレッジ計測（`flutter test --coverage`）を行い、低下傾向を継続的に確認すること
 - 新規機能追加・バグ修正時は、対応するテストコードを同一PR内に含めること
 

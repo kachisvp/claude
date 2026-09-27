@@ -46,7 +46,6 @@
 - Controller層は `@WebMvcTest` またはMockMvc/RestAssuredを用いたAPIレベルのテストを行うこと
 - 認証・認可のロジックは、権限あり/なし双方のケースを含めてテストすること
 - 結合テストはTestcontainersで実DBに近い環境を構築し、`@SpringBootTest` で検証すること
-- CI（GitHub Actions等）で `./gradlew test`（またはMaven）を自動実行し、失敗時はマージをブロックすること
 - JaCoCo等でカバレッジを計測し、著しい低下がないか継続的に確認すること
 - 新規機能追加・バグ修正時は、対応するテストコードを同一PR内に含めること
 
