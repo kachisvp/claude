@@ -42,10 +42,10 @@
 ## テスト自動化
 
 - Service層・ドメインロジックはJUnit 5によるユニットテストで検証し、外部依存はMockito等でモック化すること
-- Repository層は `@DataJpaTest` を用い、実際のクエリ結果を検証すること（H2等のインメモリDB、またはTestcontainersを使用）
+- Repository層は `@MybatisTest` を用い、テスト用DB（ローカルのMySQL）で実際のクエリ結果を検証すること
 - Controller層は `@WebMvcTest` またはMockMvc/RestAssuredを用いたAPIレベルのテストを行うこと
 - 認証・認可のロジックは、権限あり/なし双方のケースを含めてテストすること
-- 結合テストはTestcontainersで実DBに近い環境を構築し、`@SpringBootTest` で検証すること
+- 結合テストは実DB（テスト用のデータベース）に接続し、`@SpringBootTest` で検証すること
 - JaCoCo等でカバレッジを計測し、著しい低下がないか継続的に確認すること
 - 新規機能追加・バグ修正時は、対応するテストコードを同一PR内に含めること
 
